@@ -1,0 +1,11 @@
+stock_forecast_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: https://dbc-9ae8ce06-b37d.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/auto
+      token: "{{ env_var('DATABRICKS_TOKEN') }}"
+      threads: 4
+      catalog: "hive_metastore"
+      schema: "stock_forecast" 
