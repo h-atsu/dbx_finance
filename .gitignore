@@ -45,3 +45,7 @@ ENV/
 dbt_packages/
 target/
 profiles.yml 
+
+# Scratch
+scratch/**
+!scratch/README.md

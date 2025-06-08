@@ -1,0 +1,13 @@
+# The main pipeline for dbx_finance
+resources:
+  pipelines:
+    dbx_finance_pipeline:
+      name: dbx_finance_pipeline
+      catalog: workspace
+      schema: dbx_finance_${bundle.target}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src
